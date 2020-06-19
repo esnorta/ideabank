@@ -16,9 +16,15 @@
 
 </style>
 
+#lampP {
+	background: #ffffff;
+
+}
+
+
 svg{
   overflow:visible;  position:absolute;
-  left:20%;top:820px;  transform: translate(-50%,0%);
+  left:65%;top:410px;  transform: translate(-50%,0%);
 }
 .sB{ cursor: pointer;}
 #back{
@@ -30,10 +36,6 @@ svg{
   position:absolute;left:50%;top:70%;transform:translate(-50%,-50%);
   color:white; font-family:tahoma , arial; font-size:20px;
   text-align:center; white-space: nowrap;
-}
-
-#idea {
-	top: 800px;
 }
 
 
