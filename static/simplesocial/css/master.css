@@ -7,7 +7,7 @@
 
 
 .nav.navbar-nav.navbar-right li a{
-	color:  #ffffff;
+	color:  #355cd5;
 }
 
 .navbar-brand.mynav{
@@ -29,7 +29,7 @@ svg{
 .sB{ cursor: pointer;}
 #back{
   position:absolute;left:50%;top:35%; width:100%; transform:translate(-50%,-50%);
-  font-family:'Oswald', arial;  color:#ffffff;  font-size:20px; font-size:3vw;
+  font-family:'Oswald', arial;  color:#5b7cdd;  font-size:20px; font-size:3vw;
   text-align:center; white-space: nowrap;
 }
 .report{
