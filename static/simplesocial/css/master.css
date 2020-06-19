@@ -1,28 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
-
-div.container.mycontent{
-  background: #355cd5;
-}
-
+<style>
 #myindex {
 	background: #5b7cdd
 }
 
-</style>
 
 .nav.navbar-nav.navbar-right li a{
-	color:  #355cd5;
+	color:  #ffffff;
 }
 
 .navbar-brand.mynav{
 	color:  #355cd5;
 }
 
+</style>
 
 svg{
   overflow:visible;  position:absolute;
-  left:63.3%;top:420px;  transform: translate(-50%,0%);
+  left:20%;top:820px;  transform: translate(-50%,0%);
 }
 .sB{ cursor: pointer;}
 #back{
@@ -35,6 +31,11 @@ svg{
   color:white; font-family:tahoma , arial; font-size:20px;
   text-align:center; white-space: nowrap;
 }
+
+#idea {
+	top: 800px;
+}
+
 
 #DiacoDesignLink,#pens{
   color: #fff;
