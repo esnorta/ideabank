@@ -13,6 +13,7 @@ import misaka
 from django import template
 register = template.Library()
 # We can use custom template tags. In-group members templte tags
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -24,6 +25,13 @@ class Group(models.Model):
     description_html = models.TextField(editable = False, default='',
             blank = True)
     members = models.ManyToManyField(User, through = 'GroupMembers')
+    cost = models.FloatField(blank = True, null = True)
+    eco = models.FloatField(blank = True, default = 0)
+    importance = models.IntegerField(blank = True, null = True,
+            validators=[MaxValueValidator(10), MinValueValidator(1)])
+    complexity = models.IntegerField(blank = True, null = True,
+            validators=[MaxValueValidator(10), MinValueValidator(1)])
+    proj_time = models.FloatField(blank = True, null = True)
 
     def __str__(self):
         return self.name

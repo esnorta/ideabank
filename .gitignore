@@ -4,3 +4,11 @@
 /db.sqlite3
 accounts/__pycache__/*.pyc
 *cpython*
+*.swp
+*.xlsx
+*.pptx
+*.png
+slides/*
+*.js
+groups/migrations/*.py
+*.gitignore
