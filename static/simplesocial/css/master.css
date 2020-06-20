@@ -1,28 +1,54 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
+body {
+	font-family: 'Oswald';
+}
+
+/*<div class='list-group-item-text container-fluid'>*/
+.list-group-item-text{
+	font-family: 'Montserrat';
+}
+
+.badge {
+	background: #5b7cdd;
+}
+
+#groupForm {
+	font-family: 'Montserrat';
+}
+
+
+
 <style>
 #myindex {
 	background: #5b7cdd
 }
 
 
+
 .nav.navbar-nav.navbar-right li a{
-	color:  #355cd5;
+	color:  #112658;
 	font-size: 22px;
 	font-family: 'Oswald';
 }
 
 .navbar-brand.mynav{
-	color:  #355cd5;
+	color:  #112658;
 	font-size: 22px;
 	font-family: 'Oswald';
 }
+
 
 </style>
 
 #lampP {
 	background: #ffffff;
 
+}
+
+#logo {
+	width: 50px;
+	height: 50px;
 }
 
 
@@ -33,7 +59,7 @@ svg{
 .sB{ cursor: pointer;}
 #back{
   position:absolute;left:50%;top:35%; width:100%; transform:translate(-50%,-50%);
-  font-family:'Oswald', arial;  color:#3399ff;  font-size:20px; font-size:3vw;
+  font-family:'Oswald', arial;  color:#335cd5;  font-size:20px; font-size:3vw;
   text-align:center; white-space: nowrap;
 }
 .report{

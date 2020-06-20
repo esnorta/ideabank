@@ -1,20 +1,62 @@
 {% extends 'groups/group_base.html' %}
 
 {% block pregroup %}
+
+
+<style>
+
+.btn-primary:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	background: #355cd5;
+}
+
+.btn-like: {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	background: #355cd5;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background: #355cd5 !important;
+	border:0 none;
+}
+
+.glyphicon.glyphicon-heart:hover {
+	color: #e7305b;
+}
+
+
+.glyphicon.glyphicon-heart.liked {
+	color: #e7305b;
+}
+
+
+.glyphicon.glyphicon-heart.liked:hover {
+	color: #ffffff;
+}
+
+
+
+
+</style>
+
+
+
 <h1>{{group.name}}</h1>
-<h2>Голосов: {{ group.members.count }}</h2>
+<h2>Газпромпоинты: {{ group.members.count }}</h2>
 
 <div class='content'>
 
 	{% if user in group.members.all %}
 		<a href="{% url 'groups:leave' slug=group.slug %}" 
-			class='btn btn-lg btn-fill btn-warning'><span
-			class='glyphicon glyphicon-remove-circle'>Забрать свой голос</span>
+			class='btn btn-primary liked'><span
+			class='glyphicon glyphicon-heart liked'></span>
 		</a>
 	{% else %}
 		<a href="{% url 'groups:join' slug=group.slug %}" 
-			class='btn btn-lg btn-fill btn-warning'><span
-			class='glyphicon glyphicon-ok-circle'>Отлать свой голос</span>
+			class='btn btn-primary'><span
+			class='glyphicon glyphicon-heart'></span>
 		</a>
 	{% endif %}
 

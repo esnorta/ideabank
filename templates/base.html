@@ -27,9 +27,14 @@
 	
 </head>
 <body>
+
 	<nav class='navbar mynav' role='navigation' id='navbar'>
 		<div class="container">
-			<a class='navbar-brand mynav' href="{% url 'home' %}">Банк Идей</a>
+				<img src="{% static "logo_small.png" %}" alt="Газпромбанк" class='pull-left' id='logo'>
+				<a class='navbar-brand mynav' href="{% url 'home' %}" color='#112658'>
+
+					Банк Идей</a>
+
 			<ul class='nav navbar-nav navbar-right'>
 				{% if user.is_authenticated %}
 					<li><a href="{% url 'groups:all' %}">Идеи</a></li> 

@@ -25,7 +25,7 @@ class GroupForm(forms.ModelForm):
                     'type':'text', 'placeholder' : 'Название новой супер идеи'}),
             'description': forms.Textarea(attrs = {'class': 'editable \
                     medium-editor-textarea postcontent',
-                    'placeholder': "Краткое описание"}),
+                    'placeholder': False}),
         }
 
         labels = {

@@ -34,7 +34,7 @@ input[type=text] {
 
 input[type=submit] {
 	border:0 none;
-	background: #355cd5;
+	background: #112658;
 
 }
 
@@ -43,12 +43,13 @@ input[type=submit] {
 
 <h4>Создадим новую идею</h4>
 
-	<form action="{% url 'groups:create' %}" method = 'POST' id='groupForm'>
+	<form action="{% url 'groups:create' %}" method = 'POST' id='groupForm' class='gropForm'>
 		{% csrf_token %}
 		{{ form.as_p }}
 		<input type="submit" class='btn btn-primary' value='Создать'>
 	</form>
 
 	
-	<script>var editor = new MediumEditor('.editable');</script>
+	<script>var editor = new MediumEditor('.editable', {
+		placeholder: {text: 'Краткое описание'}});</script>
 {% endblock %}
