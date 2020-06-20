@@ -4,13 +4,14 @@
 {% block content %}
 
 <style>
-	.userform{
-	}
+.userform{
+ text-align: right;
+}
 </style> 
 
 <div class='container'>
 
-	<h1>Введите Вашу почту и пароль:</h1>
+	<h1 class = 'userform' >Введите Вашу почту и пароль</h1>
 	<form method='POST' class='userform'>
 		{% csrf_token %}
 
