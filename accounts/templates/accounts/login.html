@@ -2,12 +2,32 @@
 {% load bootstrap3 %}
 
 {% block content %}
+
+<style>
+	.userform{
+	}
+</style> 
+
 <div class='container'>
 
 	<h1>Введите Вашу почту и пароль:</h1>
-	<form method='POST' >
+	<form method='POST' class='userform'>
 		{% csrf_token %}
-		{% bootstrap_form form %}
+
+		<div class="form-group">
+
+			<label for={{ form.username }} Имя пользователя:</label>
+				{{ form.username }}
+
+		</div>
+
+		<div class="form-group-pass">
+
+			<label for={{ form.password }}Пароль:</label>
+				{{ form.password }}
+		</div>
+
+
 		<input type="submit" class='btn btn-default' value='Войти'>
 	</form>
 
