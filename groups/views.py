@@ -8,11 +8,12 @@ from django.views import generic
 from django.shortcuts import get_object_or_404
 from groups.models import Group, GroupMembers
 from . import models
-
+from groups.forms import GroupForm
 
 class CreateGroup(LoginRequiredMixin, generic.CreateView):
-    fields = ('name', 'description')
+    #fields = ('name', 'description')
     model = Group
+    form_class = GroupForm
 
 class SingleGroup(generic.DetailView):
     model = Group
