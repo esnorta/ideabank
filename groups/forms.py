@@ -21,12 +21,15 @@ class GroupForm(forms.ModelForm):
 
 
         widgets = {
-            'name': forms.TextInput(attrs = {'class': 'textinputclass'}),
-            'description': forms.Textarea(attrs = {'class': 'textareaclass'}),
+            'name': forms.TextInput(attrs = {'class': 'textinputclass',
+                    'type':'text', 'placeholder' : 'Название новой супер идеи'}),
+            'description': forms.Textarea(attrs = {'class': 'editable \
+                    medium-editor-textarea postcontent',
+                    'placeholder': "Краткое описание"}),
         }
 
         labels = {
-            'name':'Имя',
+            'name':'',
             'description':'Описание'
         }
 

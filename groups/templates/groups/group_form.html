@@ -2,11 +2,53 @@
 {% load bootstrap3 %}
 
 {% block group_content %}
+
+<style>
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  color: #355cd5;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.btn.btn-primary:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border: none;
+	background: #355cd5;
+}
+
+input[type=submit] {
+	border:0 none;
+	background: #355cd5;
+
+}
+
+</style>
+
+
 <h4>Создадим новую идею</h4>
 
 	<form action="{% url 'groups:create' %}" method = 'POST' id='groupForm'>
 		{% csrf_token %}
 		{{ form.as_p }}
-		<input type="submit" class='btn btn-primary btn-large' value='Create'>
+		<input type="submit" class='btn btn-primary' value='Создать'>
 	</form>
+
+	
+	<script>var editor = new MediumEditor('.editable');</script>
 {% endblock %}
