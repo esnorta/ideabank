@@ -2,3 +2,5 @@
 /templates/.index.html.swp
 /db.sqlite3
 /db.sqlite3
+accounts/__pycache__/*.pyc
+*cpython*
