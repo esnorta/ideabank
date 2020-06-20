@@ -3,6 +3,10 @@ from django.utils.text import slugify
 from django.urls import reverse
 # Allows to remove characters: if you have spaces, add dashes and bla bla
 
+from unidecode import unidecode
+from django.template import defaultfilters
+
+
 import misaka
 # Import links, markdown
 
@@ -25,7 +29,7 @@ class Group(models.Model):
         return self.name
 
     def save(self,*args, **kwargs):
-        self.slug = slugify(self.name)
+        self.slug = defaultfilters.slugify(unidecode(self.name))
         # Replacing and lowercasing things
         self.description_html = misaka.html(self.description)
         # Misaka gives markdown
