@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load staticfiles %}
+{% load static %}
+<div class='row'>
+<div class='col-md-4'>
+</div>
+<div class='col-md-8'>
+
+
+  {% autoescape off %}
+  {{ plot_div }}
+{{ plot_div_2  }}
+  {% endautoescape %}
+
+</div>
+
+
+
+</div>
+{% endblock %}

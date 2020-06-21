@@ -30,4 +30,6 @@ urlpatterns = [
             namespace='groups')),
     url(r'^posts/', include('posts.urls',
             namespace='posts')),
+    url(r'^dashboard/', include('dashboard.urls',
+            namespace='dashboard')),
 ]

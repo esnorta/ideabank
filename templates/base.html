@@ -37,6 +37,7 @@
 
 			<ul class='nav navbar-nav navbar-right'>
 				{% if user.is_authenticated %}
+					<li><a href="{% url 'dashboard:dashboard' %}">Аналитика</a></li> 
 					<li><a href="{% url 'groups:all' %}">Идеи</a></li> 
 					<li><a href="{% url 'groups:create' %}">Создать новую</a></li>
 				<!--	<li><a href="{% url 'groups:create' %}">Create Group</a></li> -->
